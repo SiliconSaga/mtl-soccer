@@ -4,12 +4,24 @@ title: Contact Us
 permalink: /contact/
 ---
 
-## Soccer Program
+## Send Us a Message
 
-For questions about soccer — registration, rules, coaching, fields, or
-game-day logistics:
+Have a question, suggestion, or concern? Use the form below and we'll get back
+to you.
 
-**Email:** [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com)
+<!-- Replace FORM_ID with your actual Google Form ID -->
+<div class="form-embed">
+  <iframe
+    src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true"
+    width="100%"
+    height="600"
+    style="border:0; border-radius:4px; margin: 1rem 0;"
+    loading="lazy">
+  </iframe>
+</div>
+
+Prefer email? Reach us directly at
+[MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com).
 
 ## Reporting Issues
 

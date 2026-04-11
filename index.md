@@ -49,10 +49,20 @@ fall seasons, emphasizing sportsmanship and a love for the game.
   </a>
 </div>
 
+## New to MTL Soccer?
+
+Read [How MTL Soccer Works]({{ site.baseurl }}/soccer/how-it-works/) for an
+overview of registration, team assignments, schedules, and what to expect.
+
 ## Registration
 
 For registration information and pricing, visit the
 [Mountain Top League website](https://mountaintopleague.com/soccer/).
+
+## Questions?
+
+Check the [FAQ]({{ site.baseurl }}/faq/) or
+[contact us]({{ site.baseurl }}/contact/).
 
 ## Get Involved
 

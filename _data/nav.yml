@@ -1,6 +1,9 @@
 - title: Home
   url: /
 
+- title: How It Works
+  url: /soccer/how-it-works/
+
 - title: Rules
   children:
     - title: Little Kickers
@@ -25,6 +28,9 @@
 
 - title: Fields
   url: /soccer/fields/
+
+- title: FAQ
+  url: /faq/
 
 - title: Contact
   url: /contact/
