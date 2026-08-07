@@ -26,6 +26,7 @@ components/mtl-site/flyers/
   assets/
     mtl-logo.png          transparent MTL crest, extracted from cleanest source
     qr-hockey.png         QR → mountaintopleague.com/hockey/, generated locally
+    make-qr.sh            offline QR regeneration script
     team-combined.jpg     cleaned/cropped best-of-three supplied photos, for the combined flyer
     team-ms.jpg           cleaned/cropped Middle School team photo
     rink-oconnor.png      downsized overview, O'Connor Park (street hockey)
@@ -65,7 +66,7 @@ Match the most recent previous flyer: deep navy arena backdrop, bold white stenc
 
 ## Export and verification
 
-`export.sh` drives headless Edge/Chrome to produce, per variant, a print PDF (US-letter) and a PNG (email/Instagram) into `exports/`, which is committed so Harold can download finished files straight from GitHub. Verification before any CR: exports visually compared against the rendered HTML, QR scan-tested from a print-size render, and TBD badges confirmed present (or absent, once finals land).
+`export.sh` drives headless Edge/Chrome to produce, per letter variant, a print PDF (US-letter) plus a PNG, and for the Instagram variant a PNG only (it is not a print format), into `exports/`, which is committed so Harold can download finished files straight from GitHub. Verification before any CR: exports visually compared against the rendered HTML, QR scan-tested from a print-size render, and TBD badges confirmed present (or absent, once finals land).
 
 ## Delivery
 
