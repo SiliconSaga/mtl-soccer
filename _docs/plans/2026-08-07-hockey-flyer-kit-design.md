@@ -16,7 +16,7 @@ This is sub-project A of three. Sub-project B (hockey site content, soccer-style
 
 - **Structure: standalone flyer kit** in `flyers/` inside mtl-site — plain HTML+CSS, no Jekyll coupling, so it survives the future per-sport repo split unchanged. Jekyll copies the folder through, so every variant gets a live preview URL at `siliconsaga.github.io/mtl-site/flyers/hockey-2026/`.
 - **QR / register target: `https://mountaintopleague.com/hockey/`** (the existing WordPress page). Stable URL, zero DNS work; volunteers keep sign-up links current there. The printed QR never goes stale when TeamSnap links change.
-- **Logo: extract best available** crest from the supplied previous flyers, background removed, committed as a transparent PNG. Upgradeable to vector later without changing consumers.
+- **Logo: best available copy** of the crest, sourced from the supplied previous flyers or the league's own published assets on mountaintopleague.com (per the approved brainstorm option "pull the cleanest logo from the previous flyers / mountaintopleague.com"), background transparent, committed as PNG. Upgradeable to vector later without changing consumers.
 - **Fonts: free-licensed font files committed to the repo** so exports render identically on any machine — no CDN fetch at print/export time.
 
 ## File layout
