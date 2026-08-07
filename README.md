@@ -12,6 +12,7 @@ All content is in Markdown files. Edit directly on GitHub or clone locally.
 - **Soccer rules** are in `soccer/`
 - **Sport stubs** are in `baseball/`, `basketball/`, `hockey/`, `softball/`
 - **Structured data** (age groups, sports list) is in `_data/`
+- **Flyer kit** (printable/social flyers + base assets) is in `flyers/` — edit the HTML, then run `bash flyers/hockey-2026/export.sh` to regenerate the PDFs/PNGs in `exports/`
 - **Non-published docs** (coaching notes, archives) are in `_docs/`
 
 ## Local Preview (optional)
