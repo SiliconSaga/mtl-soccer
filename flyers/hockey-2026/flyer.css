@@ -46,3 +46,18 @@ body { font-family: "Oswald", "Arial Narrow", sans-serif; }
 
 @media print { html, body { background: none; } .flyer { margin: 0; } }
 @page { size: letter; margin: 0; }
+
+/* variants */
+.flyer--ig .crest img { height: 140px; }
+.flyer--ig .headline { font-size: 160px; }
+.flyer--ig .banner-gold { font-size: 52px; }
+.flyer--ig .season { font-size: 34px; }
+.flyer--ig .qr-box { width: 220px; right: 44px; }
+.flyer--ig .qr-box .scan { font-size: 20px; }
+.flyer--ig .divisions { gap: 18px; padding: 20px 36px 0; }
+.flyer--ig .division-card h3 { font-size: 32px; }
+.flyer--ig .division-card .ages { font-size: 19px; }
+.flyer--ig .division-card ul { font-size: 19px; }
+.flyer--ig .fee { font-size: 28px; }
+.flyer--ig .tbd-badge { font-size: 19px; }
+.flyer--ig .footer-strip { font-size: 26px; padding: 18px 24px 22px; }
