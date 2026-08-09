@@ -15,15 +15,15 @@ MTL's sports are organized by different volunteer crews who have historically bo
 
 - **Per-sport repos, hockey first.** A single all-sports repo would collide with the sandbox's one-target-one-repo scoping and make concurrent volunteer PRs chaotic. New repo `SiliconSaga/mtl-hockey` now; this repo refits to a dedicated soccer sub-site second, renaming to `mtl-soccer` only on the owner's explicit go (the rename breaks siliconsaga.github.io/mtl-site/ URLs — GitHub Pages does not redirect).
 - **Copy the theme now, extract later.** mtl-hockey copies soccer's layouts/_sass/nav pattern with a navy/ice palette drawn from the 2026–27 flyer. A shared mtl-theme repo is deliberately deferred until a third sport (or real drift pain) justifies it.
-- **Subdomain-ready, github.io launch.** Root-relative URL discipline via baseurl, CNAME staged but inert; the future flip to a subdomain is one commit per repo.
+- **Subdomain-ready, github.io launch.** Baseurl-aware URL discipline (`{{ site.baseurl }}` / `relative_url` on every internal link, never bare root-relative paths), CNAME staged but inert; the future flip to a subdomain is one commit per repo (url + baseurl + CNAME together).
 - **Sandbox-ready, sandbox later.** Both repos ship the trust surface the sandbox needs — branch protection on main (PR-only publishing), ken-site-style pr-preview CI (preview build + visual-diff comment), agent-friendly README. The actual container/Discord/machine-account provisioning for the hockey coordinator is phase 2, after they've seen the site.
 
 ## Topology
 
-```
+```text
 WordPress (mountaintopleague.com)      — umbrella primer, per-sport pages link out to sub-sites
 SiliconSaga/mtl-hockey                 — hockey sub-site  → future hockey.mountaintopleague.com
-SiliconSaga/mtl-site → mtl-soccer     — soccer sub-site  → future soccer.mountaintopleague.com
+SiliconSaga/mtl-site                   — soccer sub-site  → future soccer.mountaintopleague.com (rename to mtl-soccer later, owner-gated)
 SiliconSaga/volundr                    — org utility repo: reusable CI workflows (and future composite actions)
 SiliconSaga/gdd-sandbox                — per-sport sandbox containers, one --target per repo (phase 2)
 realm-siliconsaga ecosystem            — declares each sub-site and volundr so ws verbs and sandbox targeting resolve
@@ -43,6 +43,7 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
 ## Shared wiring (both repos)
 
 - **CI centralized in volundr:** ken-site's `deploy.yml` and `pr-preview.yml` are ported into `SiliconSaga/volundr` as reusable (`workflow_call`) workflows — jekyll-pages-deploy and pr-preview-visual-diff (the review surface a non-technical owner judges PRs by). Each site repo carries only a thin caller stub per workflow (GitHub requires the trigger stub in-repo; logic lives centrally). volundr gets the same branch protection as the sites — a central workflow edit affects every caller at once. Follow-ups recorded in volundr's README, not built here: migrating ken-site to callers; the planned Jules-review composite action.
+- **CI trust model (stated deliberately):** callers and volundr live in the same org and volundr's main is branch-protected — callers reference `@main` as a centralization trade-off (SHA-pinning callers would reinstate the per-repo drift volundr exists to remove); revisit pinning if a repo outside the org ever calls these workflows. No custom secrets exist anywhere in this CI — jobs use only the ephemeral `GITHUB_TOKEN`, scoped by each caller's `permissions:` block. Preview jobs are write-by-design but only to `gh-pages/pr-preview/<pr>/` and PR comments (that preview+diff surface is the product); production deploys run only from push-to-main on branch-protected repos, which is the merge gate a human controls.
 - **Branch protection on main:** changes land only via PR; this is what makes the sandbox's "agent can push branches but never publish" posture enforceable rather than promised.
 - **Agent-friendly README** in ken-site's style: a "you want to change X → edit file Y" table, add-a-page recipe, preview/publish instructions.
 - **CNAME staged inert** (documented value per repo, file added only at DNS flip time so github.io serving is unaffected).
@@ -54,7 +55,7 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
 - Rebrand `_config.yml`/index as the dedicated soccer sub-site.
 - Remove `flyers/` after the kit migrates to mtl-hockey.
 - Port the shared wiring above.
-- Prepare the `mtl-soccer` rename (config baseurl, README, ecosystem) but execute it only on the owner's explicit go signal.
+- Prepare the `mtl-soccer` rename but execute it only on the owner's explicit go signal — nothing (baseurl, ecosystem name, README, Pages settings) flips early. When the go comes, the rename is one coordinated change: repo name + Pages settings + baseurl + README + ecosystem declaration together, with a stated compatibility note for the old github.io project URL (GitHub redirects the repo, not the Pages path).
 
 ## Sequencing
 
@@ -70,7 +71,7 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
 - **Pages-URL break on rename** — user-gated, deliberately deferred; risk shrinks to zero once subdomains are live.
 - **PR #1 dependency** — flyer migration blocks on its merge; bot-review triage is the first task.
 - **TeamSnap links, Mites fee, FAQ answers** — awaited from the hockey coordinator; all render as TBD badges until then.
-- **Two flyer-kit homes during the gap** — between mtl-hockey's birth and PR #1's merge+migration, the kit exists only in mtl-site; the migration task moves it whole (git history stays in mtl-site; acceptable, the kit is young).
+- **Flyer-kit migration is a copy, not a move-with-history** — per the sequence above the kit merges to mtl-site main (PR #1) before mtl-hockey exists, then the migration copies the tree whole; its git history stays in mtl-site (acceptable, the kit is young). Until the soccer refit removes the original, the kit intentionally exists in both repos with mtl-hockey canonical.
 
 ## Out of scope
 
