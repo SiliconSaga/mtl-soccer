@@ -24,8 +24,9 @@ MTL's sports are organized by different volunteer crews who have historically bo
 WordPress (mountaintopleague.com)      — umbrella primer, per-sport pages link out to sub-sites
 SiliconSaga/mtl-hockey                 — hockey sub-site  → future hockey.mountaintopleague.com
 SiliconSaga/mtl-site → mtl-soccer     — soccer sub-site  → future soccer.mountaintopleague.com
+SiliconSaga/volundr                    — org utility repo: reusable CI workflows (and future composite actions)
 SiliconSaga/gdd-sandbox                — per-sport sandbox containers, one --target per repo (phase 2)
-realm-siliconsaga ecosystem            — declares each sub-site so ws verbs and sandbox targeting resolve
+realm-siliconsaga ecosystem            — declares each sub-site and volundr so ws verbs and sandbox targeting resolve
 ```
 
 ## mtl-hockey structure and content (v1, soccer parity)
@@ -41,7 +42,7 @@ realm-siliconsaga ecosystem            — declares each sub-site so ws verbs an
 
 ## Shared wiring (both repos)
 
-- **CI ported from ken-site:** `deploy.yml` (build + publish Pages) and `pr-preview.yml` (per-PR preview site + visual-diff comment) — the review surface a non-technical owner judges PRs by.
+- **CI centralized in volundr:** ken-site's `deploy.yml` and `pr-preview.yml` are ported into `SiliconSaga/volundr` as reusable (`workflow_call`) workflows — jekyll-pages-deploy and pr-preview-visual-diff (the review surface a non-technical owner judges PRs by). Each site repo carries only a thin caller stub per workflow (GitHub requires the trigger stub in-repo; logic lives centrally). volundr gets the same branch protection as the sites — a central workflow edit affects every caller at once. Follow-ups recorded in volundr's README, not built here: migrating ken-site to callers; the planned Jules-review composite action.
 - **Branch protection on main:** changes land only via PR; this is what makes the sandbox's "agent can push branches but never publish" posture enforceable rather than promised.
 - **Agent-friendly README** in ken-site's style: a "you want to change X → edit file Y" table, add-a-page recipe, preview/publish instructions.
 - **CNAME staged inert** (documented value per repo, file added only at DNS flip time so github.io serving is unaffected).
@@ -58,10 +59,11 @@ realm-siliconsaga ecosystem            — declares each sub-site so ws verbs an
 ## Sequencing
 
 1. Preamble: triage PR #1's pending bot reviews; merge it (flyer kit must be in main before migration).
-2. mtl-hockey: repo creation, scaffold, content v1, wiring, flyer-kit migration, ecosystem declaration — shown to the hockey coordinator.
-3. mtl-soccer refit: de-stub, rebrand, flyer removal, wiring; rename staged awaiting go.
-4. Phase 2 (own spec): sandbox provisioning for the hockey coordinator (machine account, Discord, briefing).
-5. Later: DNS flips per sub-site; shared mtl-theme extraction when a third sport arrives.
+2. volundr: repo creation, the two reusable workflows ported from ken-site, branch protection, README with follow-ups (ken-site caller migration, Jules-review action), ecosystem declaration.
+3. mtl-hockey: repo creation, scaffold, content v1, wiring (caller stubs → volundr), flyer-kit migration, ecosystem declaration — shown to the hockey coordinator.
+4. mtl-soccer refit: de-stub, rebrand, flyer removal, wiring (caller stubs → volundr); rename staged awaiting go.
+5. Phase 2 (own spec): sandbox provisioning for the hockey coordinator (machine account, Discord, briefing).
+6. Later: DNS flips per sub-site; ken-site migrates to volundr callers; Jules-review composite action lands in volundr; shared mtl-theme extraction when a third sport arrives.
 
 ## Risks and open items
 
@@ -73,6 +75,7 @@ realm-siliconsaga ecosystem            — declares each sub-site so ws verbs an
 ## Out of scope
 
 - Sandbox container provisioning, Discord bot setup, machine accounts (phase 2 spec).
+- Building the Jules-review action and migrating ken-site onto volundr callers (recorded follow-ups in volundr).
 - DNS record changes and CNAME activation.
 - WordPress content changes beyond eventually linking out to sub-sites.
 - Sites for baseball/basketball/softball (the pattern is ready when their volunteers are).
