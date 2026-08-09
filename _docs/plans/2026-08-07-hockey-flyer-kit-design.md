@@ -21,8 +21,8 @@ This is sub-project A of three. Sub-project B (hockey site content, soccer-style
 
 ## File layout
 
-```
-components/mtl-site/flyers/
+```text
+flyers/
   assets/
     mtl-logo.png          transparent MTL crest, extracted from cleanest source
     qr-hockey.png         QR → mountaintopleague.com/hockey/, generated locally

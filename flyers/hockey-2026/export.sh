@@ -4,13 +4,24 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-BROWSER=""
-for c in "/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" \
-         "/c/Program Files/Microsoft/Edge/Application/msedge.exe" \
-         "/c/Program Files/Google/Chrome/Application/chrome.exe"; do
-  if [ -x "$c" ]; then BROWSER="$c"; break; fi
-done
-if [ -z "$BROWSER" ]; then echo "ERROR: no Edge/Chrome found" >&2; exit 1; fi
+# Set BROWSER to a Chromium-based browser executable to override discovery.
+BROWSER="${BROWSER:-}"
+if [ -z "$BROWSER" ]; then
+  for c in "/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" \
+           "/c/Program Files/Microsoft/Edge/Application/msedge.exe" \
+           "/c/Program Files/Google/Chrome/Application/chrome.exe" \
+           "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+           "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge" \
+           "/Applications/Chromium.app/Contents/MacOS/Chromium"; do
+    if [ -x "$c" ]; then BROWSER="$c"; break; fi
+  done
+fi
+if [ -z "$BROWSER" ]; then
+  for cmd in google-chrome google-chrome-stable chromium chromium-browser microsoft-edge msedge; do
+    if command -v "$cmd" >/dev/null 2>&1; then BROWSER="$(command -v "$cmd")"; break; fi
+  done
+fi
+if [ -z "$BROWSER" ]; then echo "ERROR: no Edge/Chrome found (set BROWSER to your browser executable)" >&2; exit 1; fi
 
 HERE="$(cygpath -m "$(pwd)" 2>/dev/null || pwd)"
 mkdir -p exports

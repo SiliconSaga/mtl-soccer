@@ -1,6 +1,6 @@
 /* MTL hockey flyer kit — shared styles. Letter pages are 816x1056 CSS px (96dpi). */
 @font-face { font-family: "Saira Stencil One"; src: url("../assets/fonts/SairaStencilOne-Regular.ttf"); }
-@font-face { font-family: "Oswald"; src: url("../assets/fonts/Oswald[wght].ttf"); font-weight: 200 700; }
+@font-face { font-family: Oswald; src: url("../assets/fonts/Oswald[wght].ttf"); font-weight: 200 700; }
 
 :root {
   --navy: #0A2D5E; --navy-deep: #071F42; --gold: #FFD200;
@@ -9,7 +9,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { background: #444; }
-body { font-family: "Oswald", "Arial Narrow", sans-serif; }
+body { font-family: Oswald, "Arial Narrow", sans-serif; }
 
 .flyer {
   width: 816px; height: 1056px; margin: 0 auto; overflow: hidden;
@@ -22,7 +22,7 @@ body { font-family: "Oswald", "Arial Narrow", sans-serif; }
 .crest { background: var(--white); border-radius: 0 0 18px 18px; padding: 10px 26px 14px; }
 .crest img { height: 110px; display: block; }
 
-.headline { font-family: "Saira Stencil One", "Oswald", sans-serif; font-size: 120px; line-height: 0.95; letter-spacing: 4px; margin-top: 8px; }
+.headline { font-family: "Saira Stencil One", Oswald, sans-serif; font-size: 120px; line-height: 0.95; letter-spacing: 4px; margin-top: 8px; }
 .banner-gold { color: var(--gold); font-weight: 700; font-size: 40px; letter-spacing: 2px; text-transform: uppercase; }
 .season { font-weight: 300; font-size: 28px; letter-spacing: 6px; margin-top: 2px; }
 
