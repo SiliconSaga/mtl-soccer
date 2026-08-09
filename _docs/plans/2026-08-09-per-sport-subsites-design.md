@@ -1,0 +1,78 @@
+# Per-Sport Sub-Sites — Design (2026-08-09)
+
+## Context
+
+MTL's sports are organized by different volunteer crews who have historically bolted arbitrary extras onto a WordPress/TeamSnap umbrella site that carries little per-sport depth. The soccer sub-site (this repo) proved the alternative: a file-based Jekyll site a volunteer (or their agent) can own end to end. The hockey coordinator has asked for the same, and gdd-sandbox (SiliconSaga/gdd-sandbox) now provides the delivery vehicle: a chat-reachable scoped agent that turns a non-technical volunteer's request into a PR with a preview site and visual diff. ken-site (SiliconSaga/ken-site) is the working example of a sandbox-ready site: agent-friendly README, deploy + pr-preview CI, PR-gated publishing.
+
+## Goals
+
+- One repo per sport, each independently ownable by its volunteer crew and independently targetable by a gdd-sandbox container and a single-repo machine-account grant.
+- The WordPress site remains the umbrella primer; sub-sites carry the depth.
+- mtl-hockey live at soccer parity soon, to show the hockey coordinator.
+- Every sub-site subdomain-ready (hockey.mountaintopleague.com etc.) with launch on github.io until DNS access materializes.
+
+## Decisions
+
+- **Per-sport repos, hockey first.** A single all-sports repo would collide with the sandbox's one-target-one-repo scoping and make concurrent volunteer PRs chaotic. New repo `SiliconSaga/mtl-hockey` now; this repo refits to a dedicated soccer sub-site second, renaming to `mtl-soccer` only on the owner's explicit go (the rename breaks siliconsaga.github.io/mtl-site/ URLs — GitHub Pages does not redirect).
+- **Copy the theme now, extract later.** mtl-hockey copies soccer's layouts/_sass/nav pattern with a navy/ice palette drawn from the 2026–27 flyer. A shared mtl-theme repo is deliberately deferred until a third sport (or real drift pain) justifies it.
+- **Subdomain-ready, github.io launch.** Root-relative URL discipline via baseurl, CNAME staged but inert; the future flip to a subdomain is one commit per repo.
+- **Sandbox-ready, sandbox later.** Both repos ship the trust surface the sandbox needs — branch protection on main (PR-only publishing), ken-site-style pr-preview CI (preview build + visual-diff comment), agent-friendly README. The actual container/Discord/machine-account provisioning for the hockey coordinator is phase 2, after they've seen the site.
+
+## Topology
+
+```
+WordPress (mountaintopleague.com)      — umbrella primer, per-sport pages link out to sub-sites
+SiliconSaga/mtl-hockey                 — hockey sub-site  → future hockey.mountaintopleague.com
+SiliconSaga/mtl-site → mtl-soccer     — soccer sub-site  → future soccer.mountaintopleague.com
+SiliconSaga/gdd-sandbox                — per-sport sandbox containers, one --target per repo (phase 2)
+realm-siliconsaga ecosystem            — declares each sub-site so ws verbs and sandbox targeting resolve
+```
+
+## mtl-hockey structure and content (v1, soccer parity)
+
+- Jekyll scaffold copied from this repo: `_layouts/` (default, page, rules, stub→dropped), `_includes/` (nav, footer, print-button, quick-ref), `_sass/` with palette swapped to flyer navy/ice (`#0A2D5E` family), `_data/nav.yml`, pretty permalinks, page-layout default.
+- Pages:
+  - **Home** — program overview + division cards (Mites 8U / Squirts 10U / Middle School with birth years, fees; TBD-badged where pricing is pending).
+  - **Register** — the one-stop shop the coordinator asked for: per-division TeamSnap registration links (TBD placeholders until links land), rolling-signup framing so interest can be gauged for ice-time purchases.
+  - **Rinks** — O'Connor Park (street hockey), Codey Arena (full ice), Mennen Arena (league games): the supplied map links, committed overview shots, parking/entry notes as known.
+  - **How It Works / FAQ / Contact** — drafted from known program details with clearly marked placeholders where only the hockey crew can answer; contact is mountaintop.hockey@gmail.com.
+  - **Flyers** — the flyer kit (flyers/assets/ + flyers/hockey-2026/) migrated from this repo after PR #1 merges, plus a downloads page linking the committed exports.
+- The kit's relative `../assets/` paths survive the migration unchanged; the kit remains Jekyll-independent.
+
+## Shared wiring (both repos)
+
+- **CI ported from ken-site:** `deploy.yml` (build + publish Pages) and `pr-preview.yml` (per-PR preview site + visual-diff comment) — the review surface a non-technical owner judges PRs by.
+- **Branch protection on main:** changes land only via PR; this is what makes the sandbox's "agent can push branches but never publish" posture enforceable rather than promised.
+- **Agent-friendly README** in ken-site's style: a "you want to change X → edit file Y" table, add-a-page recipe, preview/publish instructions.
+- **CNAME staged inert** (documented value per repo, file added only at DNS flip time so github.io serving is unaffected).
+- **Ecosystem declaration** in realm-siliconsaga for mtl-hockey (and the rename, when it happens) so `ws clone/test/cr` and sandbox `--target` resolve.
+
+## mtl-soccer refit (second pass, this repo)
+
+- Remove the four sport stub dirs (`baseball/ basketball/ hockey/ softball/`), stub layout, and stub entries in `_data/sports.yml`; keep a single "other MTL sports" link-out to the WordPress primer (and mtl-hockey once live).
+- Rebrand `_config.yml`/index as the dedicated soccer sub-site.
+- Remove `flyers/` after the kit migrates to mtl-hockey.
+- Port the shared wiring above.
+- Prepare the `mtl-soccer` rename (config baseurl, README, ecosystem) but execute it only on the owner's explicit go signal.
+
+## Sequencing
+
+1. Preamble: triage PR #1's pending bot reviews; merge it (flyer kit must be in main before migration).
+2. mtl-hockey: repo creation, scaffold, content v1, wiring, flyer-kit migration, ecosystem declaration — shown to the hockey coordinator.
+3. mtl-soccer refit: de-stub, rebrand, flyer removal, wiring; rename staged awaiting go.
+4. Phase 2 (own spec): sandbox provisioning for the hockey coordinator (machine account, Discord, briefing).
+5. Later: DNS flips per sub-site; shared mtl-theme extraction when a third sport arrives.
+
+## Risks and open items
+
+- **Pages-URL break on rename** — user-gated, deliberately deferred; risk shrinks to zero once subdomains are live.
+- **PR #1 dependency** — flyer migration blocks on its merge; bot-review triage is the first task.
+- **TeamSnap links, Mites fee, FAQ answers** — awaited from the hockey coordinator; all render as TBD badges until then.
+- **Two flyer-kit homes during the gap** — between mtl-hockey's birth and PR #1's merge+migration, the kit exists only in mtl-site; the migration task moves it whole (git history stays in mtl-site; acceptable, the kit is young).
+
+## Out of scope
+
+- Sandbox container provisioning, Discord bot setup, machine accounts (phase 2 spec).
+- DNS record changes and CNAME activation.
+- WordPress content changes beyond eventually linking out to sub-sites.
+- Sites for baseball/basketball/softball (the pattern is ready when their volunteers are).
