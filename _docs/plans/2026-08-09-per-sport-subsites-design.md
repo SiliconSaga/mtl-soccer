@@ -40,6 +40,10 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
   - **Flyers** — the flyer kit (flyers/assets/ + flyers/hockey-2026/) migrated from this repo after PR #1 merges, plus a downloads page linking the committed exports.
 - The kit's relative `../assets/` paths survive the migration unchanged; the kit remains Jekyll-independent.
 
+## Flyer framework (revised decision, 2026-08-09)
+
+The owner chose to promote the flyer machinery to a shared framework immediately (more sites will want it) instead of merging the kit into this repo and migrating it: volundr gains `flyer-kit/` — the generalized export script (manifest-driven variants), parameterized `make-qr.sh`, canonical fonts + OFL licenses, an install step that seeds a site's `flyers/` (fonts vendored per-site so Pages serves previews) — plus a reusable `flyer-export.yml` workflow that regenerates a PR's committed exports in CI and pushes them back to the PR branch, so an agent or volunteer with no local browser can complete a flyer change alone; local `export.sh` runs stay first-class (volundr as sibling clone or `VOLUNDR_DIR`). Site repos carry only flyer content: HTML/CSS, assets, a `flyers.yml` manifest, and thin caller stubs. Consequences: mtl-site PR #1 closes unmerged once the hockey flyer content lands in mtl-hockey directly (its branch is the harvest source), and the soccer refit no longer removes a `flyers/` tree — it never merges here.
+
 ## Shared wiring (both repos)
 
 - **CI centralized in volundr:** ken-site's `deploy.yml` and `pr-preview.yml` are ported into `SiliconSaga/volundr` as reusable (`workflow_call`) workflows — jekyll-pages-deploy and pr-preview-visual-diff (the review surface a non-technical owner judges PRs by). Each site repo carries only a thin caller stub per workflow (GitHub requires the trigger stub in-repo; logic lives centrally). volundr gets the same branch protection as the sites — a central workflow edit affects every caller at once. Follow-ups recorded in volundr's README, not built here: migrating ken-site to callers; the planned Jules-review composite action.
@@ -53,15 +57,15 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
 
 - Remove the four sport stub dirs (`baseball/ basketball/ hockey/ softball/`), stub layout, and stub entries in `_data/sports.yml`; keep a single "other MTL sports" link-out to the WordPress primer (and mtl-hockey once live). The README is refreshed in the same pass — stub references removed, replaced by the agent-friendly edit map from the shared wiring.
 - Rebrand `_config.yml`/index as the dedicated soccer sub-site.
-- Remove `flyers/` after the kit migrates to mtl-hockey.
+- (Flyer removal dropped: with the framework decision the kit never merges into this repo — PR #1 closes unmerged.)
 - Port the shared wiring above.
 - Prepare the `mtl-soccer` rename but execute it only on the owner's explicit go signal — nothing (baseurl, ecosystem name, README, Pages settings) flips early. When the go comes, the rename is one coordinated change: repo name + Pages settings + baseurl + README + ecosystem declaration together. Compatibility action for the old github.io project URL (GitHub redirects the repo, not the Pages path): recreate `mtl-site` as a tiny placeholder repo whose Pages site serves redirect pages (meta-refresh + canonical link) to the new URLs, and sweep known link inventory (WordPress, TeamSnap, prior emails) as part of the same change.
 
 ## Sequencing
 
-1. Preamble: triage PR #1's pending bot reviews; merge it (flyer kit must be in main before migration).
-2. volundr: repo creation, the two reusable workflows ported from ken-site, branch protection, README with follow-ups (ken-site caller migration, Jules-review action), ecosystem declaration.
-3. mtl-hockey: repo creation, scaffold, content v1, wiring (caller stubs → volundr), flyer-kit migration, ecosystem declaration — shown to the hockey coordinator.
+1. Preamble: triage PR #1's pending bot reviews. (Superseded by the flyer-framework decision: PR #1 closes unmerged after the hockey flyer content lands in mtl-hockey; its branch is the harvest source.)
+2. volundr: repo creation, the two reusable workflows ported from ken-site, branch protection, README with follow-ups (ken-site caller migration, Jules-review action), ecosystem declaration; then the flyer framework (flyer-kit/ + flyer-export.yml) as its own change.
+3. mtl-hockey: repo creation, scaffold, content v1, wiring (caller stubs → volundr), then flyer content harvested from the PR #1 branch against the framework — shown to the hockey coordinator.
 4. mtl-soccer refit: de-stub, rebrand, flyer removal, wiring (caller stubs → volundr); rename staged awaiting go.
 5. Phase 2 (own spec): sandbox provisioning for the hockey coordinator (machine account, Discord, briefing).
 6. Later: DNS flips per sub-site; ken-site migrates to volundr callers; Jules-review composite action lands in volundr; shared mtl-theme extraction when a third sport arrives.
@@ -71,7 +75,7 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
 - **Pages-URL break on rename** — user-gated, deliberately deferred; risk shrinks to zero once subdomains are live.
 - **PR #1 dependency** — flyer migration blocks on its merge; bot-review triage is the first task.
 - **TeamSnap links, Mites fee, FAQ answers** — awaited from the hockey coordinator; all render as TBD badges until then.
-- **Flyer-kit migration is a copy, not a move-with-history** — per the sequence above the kit merges to mtl-site main (PR #1) before mtl-hockey exists, then the migration copies the tree whole; its git history stays in mtl-site (acceptable, the kit is young). Until the soccer refit removes the original, the kit intentionally exists in both repos with mtl-hockey canonical.
+- **Flyer content is a harvest, not a merge-then-move** — the PR #1 branch (never merged) is the extraction source for mtl-hockey's flyer content; the branch is deleted only after the owner confirms the harvest landed. No repo ever carries a second copy.
 
 ## Out of scope
 
