@@ -42,7 +42,7 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
 
 ## Flyer framework (revised decision, 2026-08-09)
 
-The owner chose to promote the flyer machinery to a shared framework immediately (more sites will want it) instead of merging the kit into this repo and migrating it: volundr gains `flyer-kit/` — the generalized export script (manifest-driven variants), parameterized `make-qr.sh`, canonical fonts + OFL licenses, an install step that seeds a site's `flyers/` (fonts vendored per-site so Pages serves previews) — plus a reusable `flyer-export.yml` workflow that regenerates a PR's committed exports in CI and pushes them back to the PR branch, so an agent or volunteer with no local browser can complete a flyer change alone; local `export.sh` runs stay first-class (volundr as sibling clone or `VOLUNDR_DIR`). Site repos carry only flyer content: HTML/CSS, assets, a `flyers.yml` manifest, and thin caller stubs. Consequences: mtl-site PR #1 closes unmerged once the hockey flyer content lands in mtl-hockey directly (its branch is the harvest source), and the soccer refit no longer removes a `flyers/` tree — it never merges here.
+The owner chose to promote the flyer machinery to a shared framework immediately (more sites will want it) instead of merging the kit into this repo and migrating it: volundr gains `flyer-kit/` — the generalized export script (manifest-driven variants), parameterized `make-qr.sh`, canonical fonts + OFL licenses, an install step that seeds a site's `flyers/` (fonts vendored per-site so Pages serves previews) — plus a reusable `flyer-export.yml` workflow that regenerates a PR's committed exports in CI and pushes them back to the PR branch, so an agent or volunteer with no local browser can complete a flyer change alone; local `export.sh` runs stay first-class (volundr as sibling clone or `VOLUNDR_DIR`). Site repos carry only flyer content: HTML/CSS, assets, a `flyers.conf` manifest (whitespace-table format, deliberately bash-parseable with no YAML tooling required on volunteer machines), and thin caller stubs. Consequences: mtl-site PR #1 closes unmerged once the hockey flyer content lands in mtl-hockey directly (its branch is the harvest source), and the soccer refit no longer removes a `flyers/` tree — it never merges here.
 
 ## Shared wiring (both repos)
 
@@ -73,7 +73,7 @@ The owner chose to promote the flyer machinery to a shared framework immediately
 ## Risks and open items
 
 - **Pages-URL break on rename** — user-gated, deliberately deferred; risk shrinks to zero once subdomains are live.
-- **PR #1 dependency** — flyer migration blocks on its merge; bot-review triage is the first task.
+- **PR #1 is a harvest source, not a dependency** — with the framework decision nothing blocks on its merge; it closes unmerged once the hockey flyer content lands.
 - **TeamSnap links, Mites fee, FAQ answers** — awaited from the hockey coordinator; all render as TBD badges until then.
 - **Flyer content is a harvest, not a merge-then-move** — the PR #1 branch (never merged) is the extraction source for mtl-hockey's flyer content; the branch is deleted only after the owner confirms the harvest landed. No repo ever carries a second copy.
 
