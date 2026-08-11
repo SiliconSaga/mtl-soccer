@@ -2,7 +2,7 @@
 
 ## Context
 
-MTL's sports are organized by different volunteer crews who have historically bolted arbitrary extras onto a WordPress/TeamSnap umbrella site that carries little per-sport depth. The soccer sub-site (this repo) proved the alternative: a file-based Jekyll site a volunteer (or their agent) can own end to end. The hockey coordinator has asked for the same, and gdd-sandbox (SiliconSaga/gdd-sandbox) now provides the delivery vehicle: a chat-reachable scoped agent that turns a non-technical volunteer's request into a PR with a preview site and visual diff. ken-site (SiliconSaga/ken-site) is the working example of a sandbox-ready site: agent-friendly README, deploy + pr-preview CI, PR-gated publishing.
+MTL's sports are organized by different volunteer crews who have historically bolted arbitrary extras onto a WordPress/TeamSnap umbrella site that carries little per-sport depth. The soccer sub-site (mtl-site) proved the alternative: a file-based Jekyll site a volunteer (or their agent) can own end to end. The hockey coordinator has asked for the same, and gdd-sandbox (SiliconSaga/gdd-sandbox) now provides the delivery vehicle: a chat-reachable scoped agent that turns a non-technical volunteer's request into a PR with a preview site and visual diff. ken-site (SiliconSaga/ken-site) is the working example of a sandbox-ready site: agent-friendly README, deploy + pr-preview CI, PR-gated publishing.
 
 ## Goals
 
@@ -13,7 +13,7 @@ MTL's sports are organized by different volunteer crews who have historically bo
 
 ## Decisions
 
-- **Per-sport repos, hockey first.** A single all-sports repo would collide with the sandbox's one-target-one-repo scoping and make concurrent volunteer PRs chaotic. New repo `SiliconSaga/mtl-hockey` now; this repo refits to a dedicated soccer sub-site second, renaming to `mtl-soccer` only on the owner's explicit go (the rename breaks siliconsaga.github.io/mtl-site/ URLs — GitHub Pages does not redirect).
+- **Per-sport repos, hockey first.** A single all-sports repo would collide with the sandbox's one-target-one-repo scoping and make concurrent volunteer PRs chaotic. New repo `SiliconSaga/mtl-hockey` now; mtl-site refits to a dedicated soccer sub-site second, renaming to `mtl-soccer` only on the owner's explicit go (the rename breaks siliconsaga.github.io/mtl-site/ URLs — GitHub Pages does not redirect).
 - **Copy the theme now, extract later.** mtl-hockey copies soccer's layouts/_sass/nav pattern with a navy/ice palette drawn from the 2026–27 flyer. A shared mtl-theme repo is deliberately deferred until a third sport (or real drift pain) justifies it.
 - **Subdomain-ready, github.io launch.** Baseurl-aware URL discipline (`{{ site.baseurl }}` / `relative_url` on every internal link, never bare root-relative paths), CNAME staged but inert; the future flip to a subdomain is one commit per repo (url + baseurl + CNAME together).
 - **Sandbox-ready, sandbox later.** Both repos ship the trust surface the sandbox needs — branch protection on main (PR-only publishing), ken-site-style pr-preview CI (preview build + visual-diff comment), agent-friendly README. The actual container/Discord/machine-account provisioning for the hockey coordinator is phase 2, after they've seen the site.
@@ -31,18 +31,18 @@ realm-siliconsaga ecosystem            — declares each sub-site and volundr so
 
 ## mtl-hockey structure and content (v1, soccer parity)
 
-- Jekyll scaffold copied from this repo: `_layouts/` (default, page, rules, stub→dropped), `_includes/` (nav, footer, print-button, quick-ref), `_sass/` with palette swapped to flyer navy/ice (`#0A2D5E` family), `_data/nav.yml`, pretty permalinks, page-layout default.
+- Jekyll scaffold copied from mtl-site: `_layouts/` (default, page, rules, stub→dropped), `_includes/` (nav, footer, print-button, quick-ref), `_sass/` with palette swapped to flyer navy/ice (`#0A2D5E` family), `_data/nav.yml`, pretty permalinks, page-layout default.
 - Pages:
   - **Home** — program overview + division cards (Mites 8U / Squirts 10U / Middle School with birth years, fees; TBD-badged where pricing is pending).
   - **Register** — the one-stop shop the coordinator asked for: per-division TeamSnap registration links (TBD placeholders until links land), rolling-signup framing so interest can be gauged for ice-time purchases.
   - **Rinks** — O'Connor Park (street hockey), Codey Arena (full ice), Mennen Arena (league games): the supplied map links, committed overview shots, parking/entry notes as known.
   - **How It Works / FAQ / Contact** — drafted from known program details with clearly marked placeholders where only the hockey crew can answer; contact is mountaintop.hockey@gmail.com.
-  - **Flyers** — the flyer kit (flyers/assets/ + flyers/hockey-2026/) migrated from this repo after PR #1 merges, plus a downloads page linking the committed exports.
-- The kit's relative `../assets/` paths survive the migration unchanged; the kit remains Jekyll-independent.
+  - **Flyers** — flyer content (flyers/assets/ + flyers/hockey-2026/) harvested from mtl-site's never-merged PR #1 branch onto the volundr flyer-kit framework (see the revised decision below), plus a downloads page linking the committed exports.
+- The flyer content's relative `../assets/` paths survive the harvest unchanged; flyer pages remain Jekyll-independent.
 
 ## Flyer framework (revised decision, 2026-08-09)
 
-The owner chose to promote the flyer machinery to a shared framework immediately (more sites will want it) instead of merging the kit into this repo and migrating it: volundr gains `flyer-kit/` — the generalized export script (manifest-driven variants), parameterized `make-qr.sh`, canonical fonts + OFL licenses, an install step that seeds a site's `flyers/` (fonts vendored per-site so Pages serves previews) — plus a reusable `flyer-export.yml` workflow that regenerates a PR's committed exports in CI and pushes them back to the PR branch, so an agent or volunteer with no local browser can complete a flyer change alone; local `export.sh` runs stay first-class (volundr as sibling clone or `VOLUNDR_DIR`). Site repos carry only flyer content: HTML/CSS, assets, a `flyers.conf` manifest (whitespace-table format, deliberately bash-parseable with no YAML tooling required on volunteer machines), and thin caller stubs. Consequences: mtl-site PR #1 closes unmerged once the hockey flyer content lands in mtl-hockey directly (its branch is the harvest source), and the soccer refit no longer removes a `flyers/` tree — it never merges here.
+The owner chose to promote the flyer machinery to a shared framework immediately (more sites will want it) instead of merging the kit into mtl-site and migrating it: volundr gains `flyer-kit/` — the generalized export script (manifest-driven variants), parameterized `make-qr.sh`, canonical fonts + OFL licenses, an install step that seeds a site's `flyers/` (fonts vendored per-site so Pages serves previews) — plus a reusable `flyer-export.yml` workflow that regenerates a PR's committed exports in CI and pushes them back to the PR branch, so an agent or volunteer with no local browser can complete a flyer change alone; local `export.sh` runs stay first-class (volundr as sibling clone or `VOLUNDR_DIR`). Site repos carry only flyer content: HTML/CSS, assets, a `flyers.conf` manifest (whitespace-table format, deliberately bash-parseable with no YAML tooling required on volunteer machines), and thin caller stubs. Consequences: mtl-site PR #1 closes unmerged once the hockey flyer content lands in mtl-hockey directly (its branch is the harvest source), and the soccer refit no longer removes a `flyers/` tree — the kit never merges into mtl-site.
 
 ## Shared wiring (both repos)
 
@@ -53,11 +53,11 @@ The owner chose to promote the flyer machinery to a shared framework immediately
 - **CNAME staged inert** (documented value per repo, file added only at DNS flip time so github.io serving is unaffected).
 - **Ecosystem declaration** in realm-siliconsaga for mtl-hockey (and the rename, when it happens) so `ws clone/test/cr` and sandbox `--target` resolve.
 
-## mtl-soccer refit (second pass, this repo)
+## mtl-soccer refit (second pass, mtl-site)
 
 - Remove the four sport stub dirs (`baseball/ basketball/ hockey/ softball/`), stub layout, and stub entries in `_data/sports.yml`; keep a single "other MTL sports" link-out to the WordPress primer (and mtl-hockey once live). The README is refreshed in the same pass — stub references removed, replaced by the agent-friendly edit map from the shared wiring.
 - Rebrand `_config.yml`/index as the dedicated soccer sub-site.
-- (Flyer removal dropped: with the framework decision the kit never merges into this repo — PR #1 closes unmerged.)
+- (Flyer removal dropped: with the framework decision the kit never merges into mtl-site — PR #1 closes unmerged.)
 - Port the shared wiring above.
 - Prepare the `mtl-soccer` rename but execute it only on the owner's explicit go signal — nothing (baseurl, ecosystem name, README, Pages settings) flips early. When the go comes, the rename is one coordinated change: repo name + Pages settings + baseurl + README + ecosystem declaration together. Compatibility action for the old github.io project URL (GitHub redirects the repo, not the Pages path): recreate `mtl-site` as a tiny placeholder repo whose Pages site serves redirect pages (meta-refresh + canonical link) to the new URLs, and sweep known link inventory (WordPress, TeamSnap, prior emails) as part of the same change.
 
