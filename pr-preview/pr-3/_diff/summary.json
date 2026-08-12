@@ -1,0 +1,18 @@
+{
+  "changed": [
+    "/"
+  ],
+  "added": [],
+  "removed": [
+    "/baseball/",
+    "/basketball/",
+    "/hockey/",
+    "/softball/"
+  ],
+  "groups": [
+    {
+      "exemplar": "/",
+      "identical": []
+    }
+  ]
+}
