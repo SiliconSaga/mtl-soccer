@@ -4,12 +4,10 @@ title: Contact Us
 permalink: /contact/
 ---
 
-## Soccer Program
+## Send Us a Message
 
-For questions about soccer — registration, rules, coaching, fields, or
-game-day logistics:
-
-**Email:** [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com)
+Have a question, suggestion, or concern? Reach us at
+[MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com) and we'll get back to you.
 
 ## Reporting Issues
 

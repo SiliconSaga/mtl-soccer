@@ -1,6 +1,6 @@
 # MTL Soccer — site
 
-The website for **Mountain Top League soccer** (West Orange, NJ). It's a plain, file-based Jekyll site — every page is a simple text file you (or your AI agent) can edit. No logins to a website builder, no waiting on anyone else.
+The website for **Mountain Top League soccer** (West Orange, NJ), live at **<https://soccer.mountaintopleague.com/>**. It's a plain, file-based Jekyll site — every page is a simple text file you (or your AI agent) can edit. No logins to a website builder, no waiting on anyone else.
 
 > **The easiest way to change anything: just ask your agent.**
 > *"Update the 4v4 substitution rule."* · *"Add a note about the Redwood field closure."* · *"Change the fall season dates."*
@@ -22,13 +22,14 @@ The website for **Mountain Top League soccer** (West Orange, NJ). It's a plain, 
 | The colors and look | `_sass/_base.scss` |
 | Site title / description | `_config.yml` |
 | Photos and images | `assets/images/` |
+| Printable/social flyers | `flyers/` (exports regenerate automatically on PRs) |
 
 Non-published material (coaching notes, rules archives) lives in `_docs/`.
 
 ## Previewing and publishing
 
 - **Every PR gets a live preview**: a comment appears on the PR with a link to a full preview of the changed site, plus a visual diff against the current site. Review those, then merge — the live site updates within a couple of minutes.
-- **Local preview** (optional): `bundle install` once, then `bundle exec jekyll serve` and open <http://localhost:4000/mtl-site/>.
+- **Local preview** (optional): `bundle install` once, then `bundle exec jekyll serve` and open <http://localhost:4000/>.
 
 ## The bigger picture
 
