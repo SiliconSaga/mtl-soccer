@@ -6,22 +6,8 @@ permalink: /contact/
 
 ## Send Us a Message
 
-Have a question, suggestion, or concern? Use the form below and we'll get back
-to you.
-
-<!-- Replace FORM_ID with your actual Google Form ID -->
-<div class="form-embed">
-  <iframe
-    src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true"
-    width="100%"
-    height="600"
-    style="border:0; border-radius:4px; margin: 1rem 0;"
-    loading="lazy">
-  </iframe>
-</div>
-
-Prefer email? Reach us directly at
-[MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com).
+Have a question, suggestion, or concern? Reach us at
+[MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com) and we'll get back to you.
 
 ## Reporting Issues
 

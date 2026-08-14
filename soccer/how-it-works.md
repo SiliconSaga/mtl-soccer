@@ -8,15 +8,17 @@ New to MTL Soccer? Here's how the program works from registration to game day.
 
 ## Registration
 
-Registration opens before each season (spring, summer, fall) on the
-[Mountain Top League website](https://mountaintopleague.com/soccer/). You'll
-sign up through **TeamSnap**, which is the platform MTL uses to manage teams,
-schedules, and communication.
+Registration opens before each season (spring, summer, fall). You'll sign up
+through **TeamSnap**, which is the platform MTL uses to manage teams,
+schedules, and communication — [Fall 2026 registration is open
+now](https://registration.teamsnap.com/form/68415).
 
 Early-bird pricing is typically available for a limited window before the season
-starts. Watch for announcements on
-[Facebook](https://www.facebook.com/mountaintopleague) and
+starts — see the [home page]({{ site.baseurl }}/) for current rates. Watch for
+announcements on [Facebook](https://www.facebook.com/mountaintopleague) and
 [Instagram](https://www.instagram.com/mountain_top_league).
+
+<img class="site-photo" src="{{ site.baseurl }}/assets/images/team-lineup.jpg" alt="An MTL soccer team lined up on the field with their coaches after a game">
 
 ## Age Groups & Formats
 
