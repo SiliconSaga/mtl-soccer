@@ -29,8 +29,10 @@ announcements on [Facebook](https://www.facebook.com/mountaintopleague) and
 | 3rd/4th Grade | 3rd-4th | 7v7 (with goalie) | Sunday |
 | 5th/6th Grade | 5th-6th | 9v9 (with goalie) | Sunday |
 
-See the [Rules pages]({{ site.baseurl }}/) for detailed standards of play for
-each age group.
+See the rules pages for detailed standards of play:
+[Little Kickers]({{ site.baseurl }}/soccer/little-kickers/),
+[1st/2nd Grade]({{ site.baseurl }}/soccer/4v4/), and
+[3rd–6th Grade]({{ site.baseurl }}/soccer/7v7-9v9/).
 
 ## How Teams Are Built
 

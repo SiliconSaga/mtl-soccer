@@ -10,10 +10,10 @@ Common questions from parents and coaches. Can't find your answer?
 ## Registration & Teams
 
 **When does registration open?**
-Registration opens before each season (spring, summer, fall). Watch for
-announcements on [Facebook](https://www.facebook.com/mountaintopleague),
-[Instagram](https://www.instagram.com/mountain_top_league), and the
-[Mountain Top League website](https://mountaintopleague.com/).
+Registration opens before each season (spring, summer, fall) — current dates,
+rates, and the sign-up link are on the [home page]({{ site.baseurl }}/). Watch
+for announcements on [Facebook](https://www.facebook.com/mountaintopleague) and
+[Instagram](https://www.instagram.com/mountain_top_league).
 
 **Can I request a specific team or coach?**
 No — teams are assigned by MTL organizers after registration closes. Your
