@@ -5,8 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: write
+# No workflow-level grants; the deploy job alone carries contents: write to
+# push the built site to gh-pages.
+permissions: {}
 
 concurrency:
   group: gh-pages-write
@@ -14,4 +15,6 @@ concurrency:
 
 jobs:
   deploy:
+    permissions:
+      contents: write
     uses: SiliconSaga/volundr/.github/workflows/jekyll-deploy.yml@main

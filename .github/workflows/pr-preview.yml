@@ -4,9 +4,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
 
-permissions:
-  contents: write
-  pull-requests: write
+# No workflow-level grants; the preview job alone carries what the reusable
+# workflow needs: contents to publish previews to gh-pages, pull-requests for
+# the sticky comments, pages to read the served-domain configuration.
+permissions: {}
 
 concurrency:
   group: gh-pages-write
@@ -14,4 +15,8 @@ concurrency:
 
 jobs:
   preview:
+    permissions:
+      contents: write
+      pull-requests: write
+      pages: read
     uses: SiliconSaga/volundr/.github/workflows/pr-preview.yml@main
