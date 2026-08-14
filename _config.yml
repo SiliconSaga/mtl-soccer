@@ -4,6 +4,9 @@ description: >-
   serving the children of West Orange, NJ since 1959.
 url: "https://siliconsaga.github.io"
 baseurl: "/mtl-site"
+# Subdomain era: set url to https://soccer.mountaintopleague.com, baseurl to "",
+# and add a CNAME file containing soccer.mountaintopleague.com — one commit,
+# executed only together with the owner-gated mtl-soccer repo rename.
 
 permalink: pretty
 markdown: kramdown

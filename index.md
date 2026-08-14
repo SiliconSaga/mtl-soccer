@@ -58,3 +58,7 @@ For registration information and pricing, visit the
 
 MTL is run entirely by volunteers. If you're interested in coaching, refereeing,
 or helping out, reach out at [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com).
+
+## Other MTL Sports
+
+Looking for another sport? Start at the [Mountain Top League site](https://mountaintopleague.com/) — hockey now has its own home at [MTL Hockey](https://siliconsaga.github.io/mtl-hockey/).
