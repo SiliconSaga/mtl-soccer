@@ -4,13 +4,13 @@ on:
   pull_request:
     paths: ['flyers/**']
 
-# No workflow-level grants; the flyers job alone carries contents: write,
-# solely so the reusable workflow can commit regenerated flyer exports back
-# to this PR's branch — it performs no other repository writes.
+# No workflow-level grants; the flyers job declares exactly what it needs.
 permissions: {}
 
 jobs:
   flyers:
     permissions:
+      # Commit regenerated flyer exports back to this PR's branch — the
+      # job's only repository write.
       contents: write
     uses: SiliconSaga/volundr/.github/workflows/flyer-export.yml@main
