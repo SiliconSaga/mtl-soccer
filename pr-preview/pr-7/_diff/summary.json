@@ -1,0 +1,78 @@
+{
+  "changed": [
+    "/",
+    "/about/",
+    "/contact/",
+    "/faq/",
+    "/soccer/",
+    "/soccer/4v4/",
+    "/soccer/7v7-9v9/",
+    "/soccer/coach-guide/",
+    "/soccer/fields/",
+    "/soccer/game-day/",
+    "/soccer/how-it-works/",
+    "/soccer/little-kickers/",
+    "/soccer/referee-guide/",
+    "/soccer/teamsnap/"
+  ],
+  "added": [],
+  "removed": [],
+  "groups": [
+    {
+      "exemplar": "/",
+      "identical": []
+    },
+    {
+      "exemplar": "/about/",
+      "identical": []
+    },
+    {
+      "exemplar": "/contact/",
+      "identical": []
+    },
+    {
+      "exemplar": "/faq/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/4v4/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/7v7-9v9/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/coach-guide/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/fields/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/game-day/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/how-it-works/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/little-kickers/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/referee-guide/",
+      "identical": []
+    },
+    {
+      "exemplar": "/soccer/teamsnap/",
+      "identical": []
+    }
+  ]
+}
