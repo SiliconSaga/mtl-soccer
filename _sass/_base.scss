@@ -46,8 +46,14 @@ h3 { font-size: 1.15rem; }
 
 a {
   color: $mtl-blue;
-  text-decoration: none;
-  &:hover { text-decoration: underline; }
+  // Underlined by default: links must be findable without hovering, and color
+  // alone is invisible to plenty of readers. Offset + thinned so the line sits
+  // below descenders instead of striking through them.
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  text-decoration-color: rgba($mtl-blue, 0.5);
+  &:hover { text-decoration-color: currentColor; }
 }
 
 ul, ol {
