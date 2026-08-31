@@ -46,6 +46,7 @@ h3 { font-size: 1.15rem; }
 
 a {
   color: $mtl-blue;
+
   // Underlined by default: links must be findable without hovering, and color
   // alone is invisible to plenty of readers. Offset + thinned so the line sits
   // below descenders instead of striking through them.
@@ -53,7 +54,7 @@ a {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
   text-decoration-color: rgba($mtl-blue, 0.5);
-  &:hover { text-decoration-color: currentColor; }
+  &:hover { text-decoration-color: currentcolor; }
 }
 
 ul, ol {
@@ -305,6 +306,9 @@ main.container {
 
   a {
     color: $mtl-white;
+
+    // The base rule's half-opacity blue underline vanishes on navy.
+    text-decoration-color: currentcolor;
     &:hover { opacity: 0.8; }
   }
 
