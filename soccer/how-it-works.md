@@ -59,7 +59,7 @@ If your division runs two rounds, expect to be invited to the earlier slot for a
 
 A typical season runs **8-10 weeks**. Each week:
 
-- **Little Kickers** — a half hour of practice followed by a half-hour game
+- **Little Kickers** — about an hour, roughly half practice and half game
 - **1st/2nd Grade** — two 25-minute halves
 - **3rd-6th Grade** — two 25-minute halves; with enough teams, 3rd/4th ends the season with semi-finals and finals
 

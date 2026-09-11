@@ -10,9 +10,9 @@ little_kickers:
   field_width: "15-25 yards"
   goal_size: "4ft x 6ft"
   venue: "Stagg Field"
-  game_duration: "30 min practice + 30 min game"
+  game_duration: "About an hour: roughly half practice, half game"
   halves: null
-  halftime: "5 min"
+  halftime: "Short break mid-game"
   referee: false
   heading_allowed: false
   throw_ins: false
