@@ -76,6 +76,7 @@ Check the [FAQ]({{ site.baseurl }}/faq/) or
 
 MTL is run entirely by volunteers. If you're interested in coaching, refereeing,
 or helping out, reach out at [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com).
+The cross-sport [MTL Volunteering guide](https://volunteering.mountaintopleague.com/) covers what to expect — League House, gear, sportsmanship, and safety.
 
 ## Other MTL Sports
 

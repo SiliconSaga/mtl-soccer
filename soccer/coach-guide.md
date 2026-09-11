@@ -32,6 +32,7 @@ Wait for an email for further instructions and the door code.
 
 Coaches will receive an email with a link to a **digital training course on
 concussions**. This is required — please complete it before the season starts.
+The [MTL Volunteering safety page](https://volunteering.mountaintopleague.com/safety/) covers concussion signs, first aid, and weather calls in more depth.
 
 ### Background Check
 
@@ -65,6 +66,8 @@ the tone — model positive behavior for players and parents. See the
 [Game Day Guide]({{ site.baseurl }}/soccer/game-day/) for parent conduct
 expectations you can share with your team.
 
+MTL follows a **24-hour rule**: parents are asked to wait a day before raising a concern about a coaching decision, and nobody approaches a referee about a call. It protects you too — if a parent approaches you right after a game, "let's talk tomorrow" is a fine answer, said kindly. The full rule, plus guidance on keeping games balanced, is on the [MTL Volunteering sportsmanship page](https://volunteering.mountaintopleague.com/sportsmanship/).
+
 ## Uniforms
 
 - Hand out uniforms **before the session starts** so play can begin on time
@@ -96,3 +99,4 @@ Any **parent issue, player issue, or injury** must be reported to
 - [Formations]({{ site.baseurl }}/soccer/formations/) — recommended 4v4 lineups
 - [Field Locations]({{ site.baseurl }}/soccer/fields/) — overhead maps and parking
 - [Using TeamSnap]({{ site.baseurl }}/soccer/teamsnap/) — availability and schedules
+- [MTL Volunteering](https://volunteering.mountaintopleague.com/) — the cross-sport guide: League House, gear, sportsmanship, and safety

@@ -47,6 +47,7 @@ This guide covers referee responsibilities across all MTL Soccer age groups.
 
 - Report any injuries, player issues, or coach issues to
   [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com)
+- **If a parent or coach approaches you about a call, you don't need to engage.** MTL's [24-hour rule](https://volunteering.mountaintopleague.com/sportsmanship/) asks that officiating concerns go to [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com), not to the referee — feel free to point people there, and let the league know if it happens.
 
 ## Key Principles
 

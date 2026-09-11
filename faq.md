@@ -70,9 +70,13 @@ so your coach knows.
 Email [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com). All concerns are
 handled by the MTL Trustees.
 
+**I disagree with a call or a coaching decision — what should I do?**
+Give it 24 hours. MTL asks parents to wait a day before raising a concern about a coaching decision with the coach, away from the kids, and asks that nobody approach a referee about a call. If you believe a game was officiated in a way the league should hear about, email [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com) or use the [league contact form](https://mountaintopleague.com/contact-us/). The full [24-hour rule](https://volunteering.mountaintopleague.com/sportsmanship/) is on the MTL Volunteering site.
+
 **I'd like to help — how do I volunteer?**
 Email [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com). Coaches, referees,
 and general volunteers are always welcome — no prior experience required.
+The [MTL Volunteering guide](https://volunteering.mountaintopleague.com/) covers what to expect.
 
 ---
 
