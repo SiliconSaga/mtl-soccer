@@ -14,9 +14,9 @@ MTL Soccer serves over 1,000 children across spring, summer, and fall seasons.
 We offer age-appropriate recreational soccer from pre-K through 6th grade:
 
 - **Little Kickers** (ages 4-5) — introduction to soccer, focus on fun
-- **1st/2nd Grade** (ages 6-8) — 4v4 play, learning positions
+- **1st/2nd Grade** (ages 6-8) — 4v4 play, learning positions; a 1st–3rd grade girls league plays the same format
 - **3rd/4th Grade** (ages 8-10) — 7v7 with goalies
-- **5th/6th Grade** (ages 10-12) — 9v9 play
+- **5th/6th Grade** (ages 10-12) — 7v7 with goalies, introducing offside
 
 We also support **West Orange United Travel FC** for competitive play and
 **TOPSoccer** as an adaptive program.

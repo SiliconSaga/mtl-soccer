@@ -79,6 +79,7 @@ child from pulling on it.
 
 - **No baseball hats** — the brim can hit other children during play
 - **No dogs** on or around the field of play
+- **No standing behind the goal** — coaches or parents; it intimidates the kids
 
 ### Weather Cancellations
 

@@ -21,9 +21,9 @@ fall seasons, emphasizing sportsmanship and a love for the game.
     1st/2nd Grade
     <small>Ages 6-8 &middot; 4v4</small>
   </a>
-  <a href="{{ site.baseurl }}/soccer/7v7-9v9/" class="picker-card">
+  <a href="{{ site.baseurl }}/soccer/7v7/" class="picker-card">
     3rd-6th Grade
-    <small>Ages 8-12 &middot; 7v7 / 9v9</small>
+    <small>Ages 8-12 &middot; 7v7</small>
   </a>
   <a href="{{ site.baseurl }}/soccer/referee-guide/" class="picker-card">
     Referee Guide

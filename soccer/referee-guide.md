@@ -13,7 +13,7 @@ This guide covers referee responsibilities across all MTL Soccer age groups.
 - **Check the field** — ensure it is playable and clear of garbage, sticks,
   rocks, or other hazards
 - **Check the goals** — ensure goal nets are fastened and goals are anchored
-  (7v7/9v9 fields use sand bags provided by the town)
+  (7v7 fields use sand bags provided by the town)
 - **Introduce yourself** to both coaches
 - **Check each player** for shin guards and appropriate footwear (cleats are
   encouraged but not required)
@@ -24,24 +24,28 @@ This guide covers referee responsibilities across all MTL Soccer age groups.
 - **Project your voice** — explain to the players what they need to do and why
   - Many players may not know the difference between a goal kick and a
     corner kick — be patient and teach as you go
-- **Keep track of time**
+- **Keep track of time** — the referee is the timekeeper for both halves
 
 ### Rules to Enforce
 
-| Rule | Little Kickers | 1st/2nd Grade | 3rd-6th Grade |
-|---|---|---|---|
-| **No goalies** | Enforce — encourage players to move | Enforce — encourage players to move | N/A — goalies are used |
-| **Goal kick positioning** | N/A — no goal kicks | Opposing team behind midfield | Opposing team behind midfield |
-| **No heading** | Enforce | Enforce | Enforce — indirect free kick to opponents |
-| **Throw-ins** | N/A — use kick/dribble-ins | N/A — use kick/dribble-ins | Allow re-dos in first 2 weeks |
-| **Positions** | Gently encourage movement | Ensure kids line up in positions | Standard play |
+Little Kickers has no assigned referee — the two coaches run that session — so its column is here for coaches' reference.
 
-### Score Tracking (7v7 / 9v9 only)
+| Rule | Little Kickers | 1st/2nd Grade | 3rd/4th Grade | 5th/6th Grade |
+|---|---|---|---|---|
+| **No goalies** | Enforce — encourage players to move | Enforce — encourage players to move | N/A — goalies are used | N/A — goalies are used |
+| **Goal kick positioning** | N/A — no goal kicks | Opposing team behind midfield | Opposing team behind midfield | Opposing team behind midfield |
+| **Heading** | Not allowed | Not allowed | Not allowed — indirect free kick to opponents | Allowed |
+| **Offside** | N/A | N/A | Not tracked | Enforce |
+| **Throw-ins** | N/A — use kick/dribble-ins | N/A — use kick/dribble-ins | Allow re-dos in first 2 weeks | Allow re-dos in first 2 weeks |
+| **Positions** | Gently encourage movement | Ensure kids line up in positions | Standard play | Standard play |
+
+### Score Tracking (7v7 only)
 
 - Keep track of the score during the game
 - Confirm the final result with each coach after the game
 - Report the final score to
   [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com) by Sunday evening
+- Scores and standings are kept in TeamSnap for these divisions
 
 ## After the Game
 
