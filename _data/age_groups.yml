@@ -9,9 +9,10 @@ little_kickers:
   field_length: "25-35 yards"
   field_width: "15-25 yards"
   goal_size: "4ft x 6ft"
-  game_duration: "25 min practice + 25 min game"
+  venue: "Stagg Field"
+  game_duration: "About an hour: roughly half practice, half game"
   halves: null
-  halftime: null
+  halftime: "Short break mid-game"
   referee: false
   heading_allowed: false
   throw_ins: false
@@ -32,8 +33,9 @@ first_second_grade:
   field_length: "25-35 yards"
   field_width: "15-25 yards"
   goal_size: "4ft x 6ft"
-  game_duration: "Two 20-minute halves"
-  halves: "20 min"
+  venue: "Redwood Field"
+  game_duration: "Two 25-minute halves"
+  halves: "25 min"
   halftime: "3 min"
   referee: true
   heading_allowed: false
@@ -43,10 +45,11 @@ first_second_grade:
   free_kicks: true
   offside: false
   score_tracked: false
+  leagues: "1/2 Coed, 1/2/3 Girls"
 
 third_fourth_grade:
   label: "3rd/4th Grade"
-  slug: "7v7-9v9"
+  slug: "7v7"
   ages: "8-10"
   grades: "3rd-4th"
   format: "7v7"
@@ -55,6 +58,7 @@ third_fourth_grade:
   field_length: "55-65 yards"
   field_width: "35-45 yards"
   goal_size: null
+  venue: "Liberty and O'Connor Park"
   game_duration: "Two 25-minute halves"
   halves: "25 min"
   halftime: "3 min"
@@ -66,28 +70,29 @@ third_fourth_grade:
   free_kicks: true
   offside: false
   score_tracked: true
-  leagues: "Sunday 3/4 Grade Coed, Sunday 3/5 Grade Girls"
+  leagues: "3/4 Coed"
 
 fifth_sixth_grade:
   label: "5th/6th Grade"
-  slug: "7v7-9v9"
+  slug: "7v7"
   ages: "10-12"
   grades: "5th-6th"
-  format: "9v9"
+  format: "7v7"
   goalie: true
   ball_size: "4 or 5"
   field_length: "55-65 yards"
   field_width: "35-45 yards"
   goal_size: null
+  venue: "Liberty and O'Connor Park"
   game_duration: "Two 25-minute halves"
   halves: "25 min"
   halftime: "3 min"
   referee: true
-  heading_allowed: false
+  heading_allowed: true
   throw_ins: true
   corner_kicks: true
   goal_kicks: true
   free_kicks: true
-  offside: false
+  offside: true
   score_tracked: true
-  leagues: "Sunday 5/6 Grade COED"
+  leagues: "5/6 Coed"

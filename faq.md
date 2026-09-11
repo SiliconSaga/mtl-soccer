@@ -29,6 +29,7 @@ concern.
 **What does the coach provide?**
 The coach provides a uniform (jersey, shorts, socks). For Little Kickers and
 1st/2nd Grade, the coach also provides shin guards.
+For 3rd-6th Grade, goalie gloves are provided.
 
 **Do I need to buy cleats?**
 Cleats are recommended but not required — sneakers are fine.

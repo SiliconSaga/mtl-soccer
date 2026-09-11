@@ -7,9 +7,7 @@ age_group: little_kickers
 
 ## Overview
 
-Little Kickers is MTL's introductory soccer program for ages 4-5. Each session
-is **25 minutes of practice followed by a 25-minute game**. The focus is on
-having fun and getting comfortable with the ball.
+Little Kickers is MTL's introductory soccer program for ages 4-5, played at [Stagg Field]({{ site.baseurl }}/soccer/fields/stagg-field/). Each session runs about an hour: **roughly the first half is practice and the second half is a game**, with a short break partway through the game. Nobody is timing this to the minute at this age. The focus is on having fun and getting comfortable with the ball.
 
 ## Players
 
@@ -40,6 +38,15 @@ Note that the field bounds are really more like suggestions at this age - the ki
 - **No offside** — but players who camp in front of the opposing goal should be
   gently encouraged to move
 - **No score is kept** — the emphasis is on fun and learning
+
+## For Coaches
+
+There are no teenage referees at Little Kickers — the two coaches run the session together:
+
+- **Coordinate the timing** of each half with the other coach
+- **Don't switch sides at the half** — it causes confusion at this age
+- **No whistles** — the fields sit close together and a whistle carries into the next game
+- Practices beyond the built-in half hour are optional and arranged through the league — see the [league guidelines]({{ site.baseurl }}/soccer/coach-guide/#league-guidelines) in the Coach Guide
 
 ## Coaches & Parents
 

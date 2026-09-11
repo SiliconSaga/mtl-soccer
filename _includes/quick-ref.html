@@ -6,6 +6,7 @@
     <tr><th>Ball Size</th><td>{{ g.ball_size }}</td></tr>
     <tr><th>Field</th><td>{{ g.field_length }} &times; {{ g.field_width }}</td></tr>
     {% if g.goal_size %}<tr><th>Goals</th><td>{{ g.goal_size }}</td></tr>{% endif %}
+    {% if g.venue %}<tr><th>Where</th><td>{{ g.venue }}</td></tr>{% endif %}
     <tr><th>Game</th><td>{{ g.game_duration }}</td></tr>
     {% if g.halftime %}<tr><th>Halftime</th><td>{{ g.halftime }}</td></tr>{% endif %}
     <tr><th>Referee</th><td>{% if g.referee %}Yes{% else %}No{% endif %}</td></tr>

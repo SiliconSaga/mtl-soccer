@@ -25,14 +25,15 @@ announcements on [Facebook](https://www.facebook.com/mountaintopleague) and
 | Age Group | Grades | Format | Day |
 |---|---|---|---|
 | Little Kickers | Pre-K/K | 4v4 (no goalie) | Varies |
-| 1st/2nd Grade | 1st-2nd | 4v4 (no goalie) | Varies |
-| 3rd/4th Grade | 3rd-4th | 7v7 (with goalie) | Sunday |
-| 5th/6th Grade | 5th-6th | 9v9 (with goalie) | Sunday |
+| 1st/2nd Grade Coed | 1st-2nd | 4v4 (no goalie) | Varies |
+| 1st-3rd Grade Girls | 1st-3rd | 4v4 (no goalie) | Varies |
+| 3rd/4th Grade Coed | 3rd-4th | 7v7 (with goalie) | Sunday |
+| 5th/6th Grade Coed | 5th-6th | 7v7 (with goalie) | Sunday |
 
 See the rules pages for detailed standards of play:
 [Little Kickers]({{ site.baseurl }}/soccer/little-kickers/),
 [1st/2nd Grade]({{ site.baseurl }}/soccer/4v4/), and
-[3rd–6th Grade]({{ site.baseurl }}/soccer/7v7-9v9/).
+[3rd–6th Grade]({{ site.baseurl }}/soccer/7v7/).
 
 ## How Teams Are Built
 
@@ -52,15 +53,15 @@ coach will share the schedule with the team.
 
 **How time slots work:** our sites have several fields each, and depending on how many teams a division has, either every team plays at once or each field hosts two rounds — an earlier pair of teams, then a later pair. That's why some divisions show a longer time window on the schedule: it has to hold both rounds.
 
-If your division runs two rounds, expect to be invited to the earlier slot for about half your games and the later slot for the other half — one week your team might play at 9:00 AM and the next at 10:30 AM. Which teams land where is worked out close to the start of the season, once every team is accounted for, so always check TeamSnap for your upcoming game time.
+If your division runs two rounds, expect to be invited to the earlier slot for about half your games and the later slot for the other half — one week your team might play at 12:15 pm and the next at 1:30 pm. Which teams land where is worked out close to the start of the season, once every team is accounted for, so always check TeamSnap for your upcoming game time.
 
 ## The Season
 
 A typical season runs **8-10 weeks**. Each week:
 
-- **Little Kickers** — 25 minutes of practice followed by a 25-minute game
-- **1st/2nd Grade** — two 20-minute halves
-- **3rd-6th Grade** — two 25-minute halves
+- **Little Kickers** — about an hour, roughly half practice and half game
+- **1st/2nd Grade** — two 25-minute halves
+- **3rd-6th Grade** — two 25-minute halves; with enough teams, 3rd/4th ends the season with semi-finals and finals
 
 Games are held at fields around West Orange — see
 [Field Locations]({{ site.baseurl }}/soccer/fields/) for maps and parking.

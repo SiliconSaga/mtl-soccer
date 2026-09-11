@@ -11,7 +11,7 @@ The website for **Mountain Top League soccer** (West Orange, NJ), live at **<htt
 | You want to change… | Edit this file |
 |---|---|
 | Home page | `index.md` |
-| Rules (Little Kickers / 4v4 / 7v7-9v9) | `soccer/little-kickers.md`, `soccer/4v4.md`, `soccer/7v7-9v9.md` |
+| Rules (Little Kickers / 4v4 / 7v7) | `soccer/little-kickers.md`, `soccer/4v4.md`, `soccer/7v7.md` |
 | Referee / Coach / Game Day guides | `soccer/referee-guide.md`, `soccer/coach-guide.md`, `soccer/game-day.md` |
 | Field pages (maps, parking) | `soccer/fields/*.md` |
 | How It Works | `soccer/how-it-works.md` |

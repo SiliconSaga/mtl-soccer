@@ -8,6 +8,17 @@ printable: true
 A guide for MTL Soccer coaches covering pre-season setup, roster management,
 and game-day responsibilities.
 
+## League Guidelines
+
+MTL rec soccer is a volunteer organization, and the main goal is for the kids to **have fun** and get some experience playing soccer. A few things the league asks of every coach:
+
+- **Rotate players** so everyone gets a fair chance to play
+- **Snacks:** many teams have a tradition of families taking turns bringing snacks for the end of the game. Feel free to suggest it and set up a snack schedule — and ask about dietary needs so it's inclusive
+- **Games start at the appointed time.** You're welcome to ask the team to arrive 15 minutes early to warm up — on the side or the far end of the field, so the prior game isn't disturbed
+- **Coaches stay on the sideline**, not the field (running up and down the side is fine) — referees are the ones on the field
+- **No one stands behind the goal**, coaches or parents — it intimidates the kids
+- **Optional practices:** most coaches don't run them, but if you'd like to, email the league about field availability (put "field availability" in the subject line). Any practice must be optional, and please check the whole team's availability before setting one — some families can't do Saturdays due to religious observance, so ask first
+
 ## Before the Season
 
 ### Picking Up Your Team Bag
@@ -23,6 +34,7 @@ The team bag contains:
 
 - **Uniforms** — jerseys, shorts, and socks for every player on your roster
 - **Shin guards** — for Little Kickers and 1st/2nd Grade; extras may be available for older groups
+- **Goalie gloves** — for 3rd/4th and 5th/6th
 - **Basic first aid supplies** - be prepared and ready!
 - **Miscellaneous game items** (uninflated game ball, markers, etc.)
 
