@@ -86,7 +86,7 @@ Any **parent issue, player issue, or injury** must be reported to
 - Consider bringing extra water in case a player forgets theirs
 - Check the field for hazards (sticks, rocks, debris)
 - Confirm player count with the opposing coach
-- Clean up — don't leave trash behind on the field
+- Clean up — don't leave trash behind on the field, and aim to leave it better than we found it (a trash bag, a grabber, and a small cart if you travel heavy all help — see [extras worth bringing]({{ site.baseurl }}/soccer/game-day/#extras-worth-bringing))
 - Have fun — keep it positive and encouraging
 
 ## Reference

@@ -51,6 +51,15 @@ be available — ask your coach if you need one.
 
 The fields can be muddy after rain — bring extra shoes if needed for after the game
 
+### Extras Worth Bringing
+
+None of these are required, but regulars tend to swear by them:
+
+- **Snacks to share** with the team after the game — a quick check with the coach about allergies first is kind
+- **Wet wipes** — especially handy after a porta-potty visit
+- **A small trash bag or portable bin**, and a **grabber** if you have one — for litter, or goose droppings depending on the field
+- **A small cart or wagon** if you tend to travel heavy — coaches hauling a team bag especially
+
 ### Ball Sizes by Age Group
 
 | Age Group | Ball Size |
@@ -111,6 +120,7 @@ emailed to [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com).
 
 The town provides the fields — we are all responsible for cleaning up after
 ourselves. Please do not leave trash behind on the field.
+Better still, aim to leave the field in better shape than we found it — a minute of pickup at the end of a game goes a long way, and the [extras above](#extras-worth-bringing) make it painless.
 
 ---
 
