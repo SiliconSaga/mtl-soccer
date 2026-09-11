@@ -109,7 +109,7 @@ guide for details.
 - **Do not go on the field** unless you are a head coach or assistant coach.
   If you would like to help, let us know and we will let you know what is
   required.
-- **Give it 24 hours.** If you disagree with a coaching decision, wait a day before raising it with the coach, and do it away from the kids. Concerns keep; a heated sideline conversation helps no one, least of all the players.
+- **Give it 24 hours.** If you disagree with a coaching decision, wait a day before raising it with the coach, and do it away from the kids. Concerns can wait; a heated sideline conversation helps no one, least of all the players.
 - **Please don't approach a referee about a call.** Our referees are volunteers, many of them young. If you believe a game was officiated in a way the league should hear about, email [MTLsoccer@gmail.com](mailto:MTLsoccer@gmail.com) or use the [league contact form](https://mountaintopleague.com/contact-us/).
 
 The full [24-hour rule](https://volunteering.mountaintopleague.com/sportsmanship/), and the thinking behind it, is on the MTL Volunteering site — worth a read, since everyone on the field is a volunteer, coaches very much included.

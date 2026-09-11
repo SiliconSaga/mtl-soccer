@@ -53,7 +53,7 @@ coach will share the schedule with the team.
 
 **How time slots work:** our sites have several fields each, and depending on how many teams a division has, either every team plays at once or each field hosts two rounds — an earlier pair of teams, then a later pair. That's why some divisions show a longer time window on the schedule: it has to hold both rounds.
 
-If your division runs two rounds, expect to be invited to the earlier slot for about half your games and the later slot for the other half — one week your team might play at 9:00 AM and the next at 10:30 AM. Which teams land where is worked out close to the start of the season, once every team is accounted for, so always check TeamSnap for your upcoming game time.
+If your division runs two rounds, expect to be invited to the earlier slot for about half your games and the later slot for the other half — one week your team might play at 12:15 pm and the next at 1:30 pm. Which teams land where is worked out close to the start of the season, once every team is accounted for, so always check TeamSnap for your upcoming game time.
 
 ## The Season
 
