@@ -1,0 +1,17 @@
+{%- comment -%}
+Page toolbar. "Suggest an edit" appears on every page and opens this page's
+source file in GitHub's editor — GitHub handles the branch (or fork) and turns
+the change into a pull request for the league to review. "Print this page"
+appears where the page sets `printable: true` or the layout passes `print=true`.
+A page whose content really lives in a data file can aim the edit button there
+with `edit_path` in its front matter.
+{%- endcomment -%}
+{%- assign edit_path = page.edit_path | default: page.path -%}
+<div class="page-tools">
+  {%- if page.printable or include.print %}
+  <button class="tool-btn" onclick="window.print()">Print this page</button>
+  {%- endif %}
+  {%- if site.github_edit_base %}
+  <a class="tool-btn tool-btn--quiet" href="{{ site.github_edit_base }}{{ edit_path }}" title="Opens this page's text file on GitHub — your change comes back as a pull request for the league to review">Suggest an edit</a>
+  {%- endif %}
+</div>

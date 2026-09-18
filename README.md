@@ -6,6 +6,8 @@ The website for **Mountain Top League soccer** (West Orange, NJ), live at **<htt
 > *"Update the 4v4 substitution rule."* · *"Add a note about the Redwood field closure."* · *"Change the fall season dates."*
 > Then look over the PR it opens — every PR automatically gets a **preview site link and a visual diff** so you can see exactly what changes before it goes live.
 
+No agent handy? Every page on the live site has a **Suggest an edit** button (desktop only) that opens that page's file in GitHub's editor — the change comes back as a PR for the league to review, same as above.
+
 ## How the site is laid out
 
 | You want to change… | Edit this file |
@@ -19,6 +21,7 @@ The website for **Mountain Top League soccer** (West Orange, NJ), live at **<htt
 | Contact info | `contact.md` |
 | Menu | `_data/nav.yml` |
 | Age groups table | `_data/age_groups.yml` |
+| The Print / Suggest-an-edit buttons | `_includes/page-tools.html` (edit-link base in `_config.yml`) |
 | The colors and look | `_sass/_base.scss` |
 | Site title / description | `_config.yml` |
 | Photos and images | `assets/images/` |

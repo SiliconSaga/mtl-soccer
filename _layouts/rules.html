@@ -4,12 +4,14 @@ layout: default
 {% assign group = site.data.age_groups[page.age_group] %}
 
 <article class="page-content rules-page">
-  <div class="rules-header">
-    <h1>{{ page.title }}</h1>
-    <span class="age-badge">{{ group.label }} &middot; {{ group.format }}</span>
+  <div class="page-header">
+    <div>
+      <h1>{{ page.title }}</h1>
+      <span class="age-badge">{{ group.label }} &middot; {{ group.format }}</span>
+    </div>
+    {% include page-tools.html print=true %}
   </div>
 
-  {% include print-button.html %}
   {% include quick-ref.html group=group %}
 
   {{ content }}
