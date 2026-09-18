@@ -7,6 +7,10 @@ description: >-
 url: "https://soccer.mountaintopleague.com"
 baseurl: ""
 
+# Base for the "Suggest an edit" button on every page: the page's source path
+# is appended, landing in GitHub's editor for that file.
+github_edit_base: "https://github.com/SiliconSaga/mtl-soccer/edit/main/"
+
 permalink: pretty
 markdown: kramdown
 
