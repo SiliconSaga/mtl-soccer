@@ -10,8 +10,7 @@ New to MTL Soccer? Here's how the program works from registration to game day.
 
 Registration opens before each season (spring, summer, fall). You'll sign up
 through **TeamSnap**, which is the platform MTL uses to manage teams,
-schedules, and communication — [Fall 2026 registration is open
-now](https://registration.teamsnap.com/form/68415).
+schedules, and communication.
 
 Early-bird pricing is typically available for a limited window before the season
 starts — see the [home page]({{ site.baseurl }}/) for current rates. Watch for

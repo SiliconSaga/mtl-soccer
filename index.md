@@ -58,14 +58,7 @@ overview of registration, team assignments, schedules, and what to expect.
 
 ## Registration
 
-**Fall 2026 registration is open** for children ages 4 years old through 6th grade:
-
-- **$95 early rate** through August 17, 2026
-- **$155 standard rate** August 18 – September 1, 2026
-
-[**Register on TeamSnap →**](https://registration.teamsnap.com/form/68415)
-
-Register early — space is limited! The season begins in September.
+Registration is now closed for all MTL fall soccer programs. Please check back in February 2027 for information on spring soccer.
 
 ## Questions?
 
