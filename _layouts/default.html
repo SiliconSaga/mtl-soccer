@@ -6,6 +6,8 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+  <link rel="alternate" type="application/feed+json" title="{{ site.title }} news (JSON)" href="{{ '/news/feed.json' | absolute_url }}">
 </head>
 <body>
   <header class="site-header">

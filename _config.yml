@@ -14,9 +14,19 @@ github_edit_base: "https://github.com/SiliconSaga/mtl-soccer/edit/main/"
 permalink: pretty
 markdown: kramdown
 
-# Ships with the github-pages gem; used for the /soccer/7v7-9v9/ → /soccer/7v7/ redirect.
+# Both ship with the github-pages gem. jekyll-redirect-from handles the
+# /soccer/7v7-9v9/ → /soccer/7v7/ redirect. jekyll-feed publishes news posts
+# (_posts/) as an Atom feed at /feed.xml; news/feed.json carries the same posts
+# as a JSON Feed with the extra fields the league-wide site reads (sport,
+# featured_until, image).
 plugins:
   - jekyll-redirect-from
+  - jekyll-feed
+
+feed:
+  posts_limit: 20
+
+sport: soccer
 
 sass:
   sass_dir: _sass
@@ -34,3 +44,9 @@ defaults:
       path: ""
     values:
       layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /news/:year/:month/:title/
