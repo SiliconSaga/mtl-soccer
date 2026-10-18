@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{%- comment -%}
+One news post. Front matter:
+  title, description   headline and one-line summary (the summary shows in
+                       lists, feeds, and the league-wide site)
+  image, image_alt     the main picture, usually the image that was posted
+  downloads            optional list of {label, file} for the other sizes
+  featured_until       optional date; the league-wide site features the post
+                       until then
+The body is the post text, written for the web: links spelled out as links,
+no hashtags.
+{%- endcomment -%}
+<article class="page-content post">
+  <div class="page-header">
+    <div>
+      <p class="post-date"><a href="{{ '/news/' | relative_url }}">News</a> &middot; <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+      <h1>{{ page.title }}</h1>
+    </div>
+    {% include page-tools.html %}
+  </div>
+
+  {%- if page.image %}
+  <img class="site-photo" src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}">
+  {%- endif %}
+
+  {{ content }}
+
+  {%- if page.downloads %}
+  <h2>Images from this post</h2>
+  <p>Free to share, print, or repost for the league.</p>
+  <ul>
+    {%- for d in page.downloads %}
+    <li><a href="{{ d.file | relative_url }}" download>{{ d.label }}</a></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+
+  {% include follow.html %}
+</article>

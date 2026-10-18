@@ -1,0 +1,16 @@
+{%- comment -%}
+"Follow MTL Basketball news" box: one-click buttons for the popular web feed
+readers, plus the raw feed address for any other reader app. The feed itself
+is /feed.xml, built by jekyll-feed from _posts/.
+{%- endcomment -%}
+{%- assign feed_url = '/feed.xml' | absolute_url -%}
+<aside class="follow-box">
+  <h2>Follow {{ site.title }} news</h2>
+  <p>Get new posts in a feed reader: no account with us, no email list, no ads, and you can stop any time. Pick a reader:</p>
+  <p class="follow-buttons">
+    <a class="tool-btn" href="https://feedly.com/i/subscription/feed%2F{{ feed_url | url_encode }}">Follow in Feedly</a>
+    <a class="tool-btn" href="https://www.inoreader.com/?add_feed={{ feed_url | url_encode }}">Follow in Inoreader</a>
+    <button class="tool-btn tool-btn--quiet" type="button" data-copy="{{ feed_url }}" onclick="navigator.clipboard.writeText(this.dataset.copy).then(() => { this.textContent = 'Copied!'; })">Copy feed address</button>
+  </p>
+  <p class="follow-note">Prefer a free, open-source reader app? Paste the feed address <code>{{ feed_url }}</code> into <a href="https://netnewswire.com/">NetNewsWire</a> (iPhone, iPad, Mac), <a href="https://f-droid.org/packages/com.nononsenseapps.feeder/">Feeder</a> (Android), or <a href="https://www.thunderbird.net/">Thunderbird</a> (desktop).</p>
+</aside>

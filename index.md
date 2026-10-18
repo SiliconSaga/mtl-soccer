@@ -51,6 +51,14 @@ fall seasons, emphasizing sportsmanship and a love for the game.
   </a>
 </div>
 
+{% if site.posts.size > 0 %}
+## Latest News
+
+{% include post-list.html limit=2 %}
+
+[All news, and how to follow it →]({{ site.baseurl }}/news/)
+{% endif %}
+
 ## New to MTL Soccer?
 
 Read [How MTL Soccer Works]({{ site.baseurl }}/soccer/how-it-works/) for an

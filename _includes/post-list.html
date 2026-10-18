@@ -1,0 +1,22 @@
+{%- comment -%}
+News post list with thumbnails, newest first. Pass limit=N to cap it.
+{%- endcomment -%}
+{%- assign limit = include.limit | default: 1000 -%}
+{%- if site.posts.size == 0 %}
+<p><em>No news posts yet. Follow below to get the first one.</em></p>
+{%- else %}
+<ul class="post-list">
+{%- for post in site.posts limit: limit %}
+  <li>
+    {%- if post.image %}
+    <a href="{{ post.url | relative_url }}" class="post-list-thumb"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>
+    {%- endif %}
+    <div>
+      <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></small>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      {%- if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </div>
+  </li>
+{%- endfor %}
+</ul>
+{%- endif %}

@@ -1,0 +1,35 @@
+---
+layout: null
+permalink: /news/feed.json
+---
+{%- comment -%}
+JSON Feed 1.1 (https://jsonfeed.org/version/1.1) of the news posts. Readers
+that take JSON Feed can follow it like /feed.xml; the league-wide site reads it
+at build time to show each sport's latest news. "_mtl" is a JSON Feed
+extension carrying the league-specific fields.
+{%- endcomment -%}
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ site.title | append: " news" | jsonify }},
+  "home_page_url": {{ '/news/' | absolute_url | jsonify }},
+  "feed_url": {{ '/news/feed.json' | absolute_url | jsonify }},
+  "description": {{ site.description | strip | jsonify }},
+  "language": "en-US",
+  "_mtl": { "sport": {{ site.sport | jsonify }}, "site_url": {{ '/' | absolute_url | jsonify }} },
+  "items": [
+    {%- for post in site.posts limit: 20 %}
+    {
+      "id": {{ post.url | absolute_url | jsonify }},
+      "url": {{ post.url | absolute_url | jsonify }},
+      "title": {{ post.title | jsonify }},
+      "summary": {{ post.description | default: post.excerpt | strip_html | strip | jsonify }},
+      "content_html": {{ post.content | jsonify }},
+      {%- if post.image %}
+      "image": {{ post.image | absolute_url | jsonify }},
+      {%- endif %}
+      "date_published": {{ post.date | date_to_xmlschema | jsonify }},
+      "_mtl": { "sport": {{ site.sport | jsonify }}, "featured_until": {% if post.featured_until %}{{ post.featured_until | date: "%Y-%m-%d" | jsonify }}{% else %}null{% endif %} }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
