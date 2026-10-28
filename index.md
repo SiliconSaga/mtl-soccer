@@ -51,6 +51,14 @@ fall seasons, emphasizing sportsmanship and a love for the game.
   </a>
 </div>
 
+{% if site.posts.size > 0 %}
+## Latest News
+
+{% include post-list.html limit=2 %}
+
+[All news, and how to follow it →]({{ site.baseurl }}/news/)
+{% endif %}
+
 ## New to MTL Soccer?
 
 Read [How MTL Soccer Works]({{ site.baseurl }}/soccer/how-it-works/) for an
@@ -73,4 +81,4 @@ The cross-sport [MTL Volunteering guide](https://volunteering.mountaintopleague.
 
 ## Other MTL Sports
 
-Looking for another sport? Start at the [Mountain Top League site](https://mountaintopleague.com/) — hockey has its own home at [MTL Hockey](https://hockey.mountaintopleague.com/).
+Looking for another sport? Start at the [Mountain Top League site](https://mountaintopleague.com/) — hockey and basketball have their own homes at [MTL Hockey](https://hockey.mountaintopleague.com/) and [MTL Basketball](https://basketball.mountaintopleague.com/).

@@ -1,0 +1,61 @@
+// News: post lists, the single-post header, and the follow box. Shared by
+// the MTL sport sites; each site sets $mtl-accent in its palette.
+.post-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+
+  li {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid $mtl-border;
+  }
+
+  h3 { margin: 0.1rem 0 0.25rem; }
+  small { color: $mtl-gray; }
+  p { margin-bottom: 0; }
+}
+
+.post-list-thumb {
+  flex: 0 0 96px;
+
+  img {
+    display: block;
+    width: 96px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+
+.post-date {
+  margin-bottom: 0.25rem;
+  color: $mtl-gray;
+  font-size: 0.9rem;
+}
+
+// "Follow <site> news" box
+.follow-box {
+  background: $mtl-light;
+  border-left: 4px solid $mtl-accent;
+  border-radius: 4px;
+  padding: 0.25rem 1rem 0.75rem;
+  margin: 2rem 0 1rem;
+
+  h2 { border-bottom: none; margin-top: 0.75rem; }
+}
+
+.follow-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.follow-note {
+  font-size: 0.9rem;
+  color: $mtl-gray;
+
+  code { word-break: break-all; }
+}
