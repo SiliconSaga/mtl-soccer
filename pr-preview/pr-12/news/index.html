@@ -132,7 +132,7 @@
   <p class="follow-buttons">
     <a class="tool-btn" href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Fsoccer.mountaintopleague.com%2Fpr-preview%2Fpr-12%2Ffeed.xml">Follow in Feedly</a>
     <a class="tool-btn" href="https://www.inoreader.com/?add_feed=https%3A%2F%2Fsoccer.mountaintopleague.com%2Fpr-preview%2Fpr-12%2Ffeed.xml">Follow in Inoreader</a>
-    <button class="tool-btn tool-btn--quiet" type="button" data-copy="https://soccer.mountaintopleague.com/pr-preview/pr-12/feed.xml" onclick="navigator.clipboard.writeText(this.dataset.copy).then(() =&gt; { this.textContent = 'Copied!'; })">Copy feed address</button>
+    <button class="tool-btn tool-btn--quiet" type="button" data-copy="https://soccer.mountaintopleague.com/pr-preview/pr-12/feed.xml" onclick="var b = this, fail = function () { b.textContent = 'Copy the address below'; }; if (navigator.clipboard) { navigator.clipboard.writeText(b.dataset.copy).then(function () { b.textContent = 'Copied!'; }, fail); } else { fail(); }">Copy feed address</button>
   </p>
   <p class="follow-note">Prefer a free, open-source reader app? Paste the feed address <code>https://soccer.mountaintopleague.com/pr-preview/pr-12/feed.xml</code> into <a href="https://netnewswire.com/">NetNewsWire</a> (iPhone, iPad, Mac), <a href="https://f-droid.org/packages/com.nononsenseapps.feeder/">Feeder</a> (Android), or <a href="https://www.thunderbird.net/">Thunderbird</a> (desktop).</p>
 </aside>
